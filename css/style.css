@@ -1,0 +1,1010 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body{
+  background-color: #eee;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-image: linear-gradient(rgb(31,34,34),rgb(22, 76, 102));
+  position: relative;
+}
+
+.hidden{
+  display: none;
+}
+
+#wrapper{
+  background-image: url('../images/earthmoon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80vw;
+  min-height: 84vh;
+  background-color: #f2f6fb;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 4% auto;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2px 2px 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+#foto_profil img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  animation-name: pop_out;
+  animation-duration: 4s;
+}
+
+@keyframes pop_out{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* MENU */
+#menu ul{
+  margin-top: 10px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+#menu li{
+  list-style: none;
+}
+
+#menu li a{
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #fafafa;
+  margin: 0 10px;
+  font-size: 1.2em;
+  transition: ease-out 0.1s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#menu li a:hover{
+  font-size: 1.3em;
+  text-shadow: 2px 2px 5px;
+}
+
+
+#intro{
+  box-sizing: border-box;
+  position: relative;
+  width: 60%;
+  color: #fafafa;
+  text-align: center;
+  padding: 5% 5%;
+  transition: ease-out 0.2s;
+  border-radius: 0 10px 10px 0;
+}
+
+#introH1{
+  text-transform:uppercase;
+  letter-spacing: 2px;
+  padding: 5px;
+  margin-bottom: 20px;
+  background-color: rgba(31,34,34,0.3);
+}
+
+#introP{
+  padding: 5px;
+  margin: 0 5%;
+  box-sizing: border-box;
+  border-radius: 0 50px 0 50px;
+  font-family: 'Itim', sans-serif;
+  font-size: 1.3em;
+  font-style: italic;
+  letter-spacing: 2px;
+  background-color: rgb(22, 76, 102);
+  text-transform: uppercase;
+}
+.highlight{
+  border-right: 5px solid rgb(31, 115, 227);
+  border-bottom: 5px solid rgb(31, 115, 227);
+  box-shadow: 4px 4px;
+}
+
+#desk{
+  background-color: rgba(31,34,34,0.3);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px;
+  color: #fafafa;
+  margin-top: 2em;
+  padding: 10px 20px;
+  text-align: justify;
+  font-family: 'Itim', sans-serif;
+  position: relative;
+}
+
+#desk p{
+  text-indent:20px;
+  margin-bottom: 10px;
+}
+
+.btn-download{
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 1px solid #fafafa;
+  color: #fafafa;
+  text-decoration: none;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.btn-download:hover{
+  color: #fafafa;
+  right: 5px;
+
+}
+
+#quote{
+  background-color: rgba(31,34,34,0.3);
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px;
+  color: #fafafa;
+  margin-top: 2em;
+  padding: 10px 20px;
+  text-align: justify;
+  font-family: 'Itim', sans-serif;
+  height: 100px;
+}
+
+#quoteAuthor{
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+}
+
+.appear{
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+
+#btnQuote{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 20px 50px;
+  background: transparent;
+  font-size: 1.1em;
+  color: #fafafa;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 2px;
+  border: none;
+  transition: ease-out 0.1s;
+}
+
+#btnQuote:hover{
+  border: 1px solid #fafafa;
+  padding: 0.4em;
+}
+
+
+@media (max-width: 1130px) {
+  #intro, #menu{
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 1045px){
+  #intro, #menu{
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 950px){
+  #wrapper{
+    flex-direction: column;
+    height: 100%;
+  }
+
+  #foto_profil{
+    width: 40%;
+    align-self: center;
+    margin-bottom: 0;
+    background-color: rgba(62, 60, 102, 0.5);
+    box-shadow: 1px -10px 10px;
+    color: #fafafa;
+    position: relative;
+  }
+
+  #intro{
+    width: 100%;
+    padding: 10% 10%;
+    border: 0 0 10px 10px;
+  }
+
+  #wrapper #menu li a{
+    text-shadow: 0 0 0;
+    transition: ease-out 0.1s;
+  }
+
+  #menu li a:hover{
+    text-shadow: 2px 2px 5px;
+  }
+  /* .btn-download:hover{
+    bottom: 0px;
+  } */
+}
+
+@media (max-width: 430px){
+  #introH1{
+    font-size: 1.2em;
+  }
+  #introP{
+    font-size: 1em;
+  }
+}
+
+/* ABOUT STYLE */
+#wrapper2{
+  width: 95vw;
+  height: 100%;
+  background-color: #f2f6fb;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 1% auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 5px;
+  position: relative;
+}
+
+#wrapper2 #menu{
+  background-color: rgb(10,10,10);
+  height: 50px;
+  position: relative;
+}
+
+#wrapper2 #menu li a{
+  text-shadow: 0 0 0;
+}
+
+#wrapper2 #menu li a:hover{
+  color: #fafafa;
+  text-shadow: 2px 2px 5px;
+}
+
+#jumbotron{
+  width: 100%;
+  height: 600px;
+  background-image: url('../images/night-sky.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#image_move{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fafafa;
+  font-family: 'Itim', sans-serif;
+}
+
+#guide{
+  position: absolute;
+  animation-name: moving_guide;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+#moon{
+  width: 15%;
+  position: relative;
+  animation-name: moving_moon;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+}
+
+#cloud{
+  height: 250px;
+  width: 80%;
+  position: absolute;
+  animation-name: moving_cloud;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moving_guide{
+  0%{
+    top: 150px;
+  }
+  50%{
+    top: 170px;
+  }
+  100%{
+    top: 150px;
+  }
+}
+@keyframes moving_moon {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
+
+@keyframes moving_cloud{
+  0%{
+    top: 250px;
+    opacity: 1;
+  }
+  50%{
+    top: 260px;
+    opacity: 0.8;
+  }
+  100%{
+    top: 250px;
+    opacity: 1;
+  }
+}
+
+
+
+#content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#titled{
+  position: relative;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+}
+
+#titled img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 10px 0px;
+}
+
+#titled h2{
+  color: rgb(22, 76, 102);
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+#titledDesk{
+  color: rgb(31, 34, 34);
+  margin: 10px 0;
+  width: 80%;
+  text-align: center;
+  font-family: 'Itim', sans-serif;
+  font-size: 1.3em;
+}
+
+#personal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: ease-out 1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.personalBeauty{
+  /* background-image: linear-gradient(rgb(31, 34, 34),rgb(22, 76, 102)); */
+  background-image: url('../images/earthmoon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fafafa;
+  padding: 4em 0;
+  width: 100%;
+  animation-name: personal;
+  animation-duration: 1s;
+}
+
+@keyframes personal{
+  0%{
+    width: 40%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+#personalInfo{
+  color: #fafafa;
+  position: relative;
+  padding: 2em 4em;
+  /* background-color: rgba(31,34,34,0.7); */
+}
+
+#personal h2{
+  color: #fafafa;
+}
+
+.btn{
+  background-color: transparent;
+  box-sizing: border-box;
+  border: 10px;
+  border-radius: 10px;
+  padding: 15px 10px;
+  margin-top: 25px;
+  transition: ease-out 0.4s;
+  border:1px solid rgb(31,34,34);
+  position: relative;
+
+}
+
+.btn_expand{
+  color: #fafafa;
+  border: 1px solid #fafafa;
+}
+
+.btn_hide{
+  border: 1px solid rgb(31,34,34);
+}
+
+#personalInfo h2{
+  text-align: center;
+}
+
+#personal button:hover{
+  background-color: #fafafa;
+  color: rgb(22,76,102);
+  text-shadow: 1px 1px 2px;
+  cursor: pointer;
+}
+
+.listData{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.label{
+  width: 50%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.labelValue{
+  width: 50%;
+  text-align: left;
+  padding-left: 10px;
+  text-decoration: underline;
+}
+
+#mySkills{
+  display: flex;
+  flex-direction: row;
+  color: rgb(31, 34, 34);
+  font-size: 1.1em;
+  padding: 3em;
+  width: 80%;
+  position: relative;
+}
+
+#mySkills i{
+  font-size: 6.25em;
+}
+
+#school, #programmingSkills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  transition: ease-out 1s;
+  /* border: 1px solid blue; */
+}
+
+#school h1, #programmingSkills h1{
+  margin-bottom: 20px;
+}
+
+.listSchools{
+  display: flex;
+  flex-direction: row;
+  align-self:flex-start;
+  margin: 10px 0;
+  color: rgb(22, 76, 102);
+  width: 100%;
+  transition: ease-out 1s;
+}
+
+.years{
+  box-sizing: border-box;
+  margin: 0 10px;
+  width: 30%;
+  text-decoration: overline;
+  padding: 10px 0px;
+}
+
+.name_school{
+  padding: 10px 0px;
+  width: 100%;
+}
+
+
+.listSkills{
+  margin: 10px 0;
+  width: 100%;
+  padding:0 2em;
+  transition: ease-out 1s;
+}
+
+.titleSkill{
+  letter-spacing: 2px;
+  color: #fafafa;
+  font-family: "Itim", sans-serif;
+}
+
+.barSkill{
+  width: 100%;
+  height: 1.3em;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+#pythonGauge, #htmlGauge, #cssGauge, #jsGauge, #algorithmGauge{
+  height: 1.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-image: linear-gradient(to right,rgba(255,255,255,0) ,rgb(22, 76, 102));
+}
+
+#pythonGauge{
+  width: 95%;
+}
+
+#htmlGauge{
+  width: 98%;
+}
+
+#cssGauge{
+  width: 90%;
+}
+
+#jsGauge{
+  width: 80%;
+}
+
+#algorithmGauge{
+  width: 80%;
+}
+
+
+/* Experience */
+#experience{
+  background-image: linear-gradient(rgb(31, 34, 34),rgb(22, 76, 102));
+  color: #fafafa;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid red;
+}
+
+#experience h1{
+  margin: 2em 0;
+}
+
+.listExp{
+  width: 60%;
+  background-color: rgba(31,34,34,0.4);
+  padding: 1em 2em;
+  border-radius: 5px;
+  margin-bottom: 3em;
+  box-shadow: 1px 1px 4px;
+}
+
+.dateExp{
+  text-indent: 10px;
+  border-left: 5px solid;
+  margin: 10px 0;
+  transition: 1s;
+}
+
+.deskExp{
+  margin: 1em 2em;
+  transition: 1s;
+}
+
+.deskExp h2{
+  letter-spacing: 2px;
+  margin: 0.3em 0;
+}
+
+.deskExp h3{
+  margin: 0.2em 0;
+}
+
+/* What i can do */
+#project{
+  font-size: 1.1em;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 4em;
+  background-color: rgb(22, 76, 102);
+  transition: ease-out 1s;
+}
+
+#titledProject{
+  margin-top: 1.5em;
+}
+
+#listProject{
+  margin: 3em 2em;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.project{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  transition: ease-out 1s;
+}
+
+.projectDesk{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 50%;
+}
+.project img{
+  width: 50%;
+  box-shadow: 1px 1px 4px;
+  color: #fafafa;
+  border-radius: 10px;
+}
+
+.project p{
+  font-family: "Itim", sans-serif;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+
+/* Contact */
+#contact{
+  padding: 3em 4em;
+  background-color: rgb(31, 34, 34);
+  height: 300px;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid red;
+  transition: ease-out 1s;
+}
+
+#contact h1{
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+#contact p{
+  font-style: italic;
+  color: #bbb;
+  font-family: "Itim", sans-serif;
+}
+
+#sosmed{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+
+#sosmed i{
+  margin: 0 15px;
+  color: #fafafa;
+  font-size: 2em;
+  position: relative;
+  transition: ease-out 0.3s;
+}
+
+#sosmed i:hover{
+  padding-top: 10px;
+}
+
+footer{
+  text-align: right;
+  padding: 1em 4em;
+  background-color: rgb(31,34,34);
+  box-sizing: border-box;
+  color: #fafafa;
+}
+
+
+/* Media Quories for about page */
+
+@media (max-width: 950px){
+
+  #titledDesk{
+    font-size: 1.2em;
+  }
+
+  .personalBeauty{
+    border-radius: 0;
+  }
+
+  #mySkills{
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    padding-top: 3em;
+    width: 100%;
+  }
+
+  #mySkills i{
+    font-size: 4em;
+  }
+
+  #school{
+    width: 100%;
+    background-image: linear-gradient(rgb(31,34,34),rgb(22, 76, 102));
+    color: #fafafa;
+    padding: 2em 1em;
+  }
+
+  .listSchools{
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .years, .name_school{
+    width: 100%;
+    margin: 0;
+    color: #fafafa;
+    text-align: center;
+  }
+
+  #programmingSkills{
+    margin-top: 6em;
+  }
+
+  .dateExp, .deskExp{
+    font-size: 0.9em;
+  }
+  .project{
+    background-color: rgb(31,34,34);
+    padding: 1em;
+    box-shadow: 1px 1px 4px;
+    border-radius: 10px;
+  }
+
+  .project img{
+    box-shadow: 0 0 0 ;
+    border-radius: 0;
+  }
+
+  #contact h1{
+    font-size: 2.3em;
+  }
+
+  #sosmed i{
+    font-size: 1.7em;
+  }
+
+  footer{
+    font-size: 0.9em;
+    color: #ccc;
+  }
+}
+
+@media (max-width: 750px){
+  #jumbotron{
+    height: 400px;
+  }
+  @keyframes moving_guide{
+    0%{
+      top: 80px;
+    }
+    50%{
+      top: 100px;
+    }
+    100%{
+      top: 80px;
+    }
+  }
+
+  #cloud{
+    height: 200px;
+  }
+  @keyframes moving_cloud{
+    0%{
+      top: 160px;
+      opacity: 1;
+    }
+    50%{
+      top: 170px;
+      opacity: 0.8;
+    }
+    100%{
+      top: 160px;
+      opacity: 1;
+    }
+  }
+
+  #titled{
+    width: 100%;
+  }
+
+  #titled h2{
+    font-size: 2em;
+  }
+
+  #titledDesk{
+    padding: 1em 2em;
+  }
+
+  .personalBeauty{
+    border-radius: 0;
+  }
+
+  #mySkills{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 0;
+    padding-top: 3em;
+  }
+
+  #mySkills i{
+    font-size: 4em;
+  }
+
+  #school, #programmingSkills {
+    width: 100%;
+  }
+
+  #school h1, #programmingSkills h1{
+    font-size: 1.2em;
+  }
+
+  .listSchools{
+    flex-direction: column;
+    align-self: center;
+    color: #fafafa;
+    font-size: 0.8em;
+  }
+
+  .years{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .name_school{
+    text-align: center;
+  }
+
+  #programmingSkills{
+    margin-top: 2em;
+  }
+
+  .listSkills{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .titleSkill{
+    font-size: 0.8em;
+  }
+
+  .barSkill{
+    width: 60%;
+    height: 1.1em;
+  }
+
+  #pythonGauge, #htmlGauge, #cssGauge, #jsGauge, #algorithmGauge{
+    height: 1em;
+  }
+
+  .dateExp, .deskExp{
+    font-size: 0.8em;
+  }
+
+  #project{
+    font-size: 0.8em;
+  }
+
+  .project{
+    flex-direction: column;
+    align-items: center;
+  }
+  .projectDesk{
+    width: 90%;
+  }
+
+  .project img{
+    width: 90%;
+    box-shadow: 0 0 0 ;
+    border-radius: 0;
+    margin: 1em 0;
+  }
+
+  #contact h1{
+    font-size: 2em;
+  }
+
+  #sosmed i{
+    font-size: 1.4em;
+  }
+
+  footer{
+    font-size: 0.8em;
+    color: #ccc;
+  }
+}
+
+
+
+
+
+
+
+
+/* additional */
